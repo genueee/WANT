@@ -690,9 +690,9 @@
           </marker>
           <filter id="drop-shadow" width="260%" height="260%" x="-80%" y="-80%">
             <feGaussianBlur in="SourceAlpha" stdDeviation="30"></feGaussianBlur>
-            <feOffset dx="0" dy="0" result="offsetblur"></feOffset>
-            <feFlood flood-color="rgba(0,0,0,0.3)"></feFlood>
-            <feComposite in2="offsetblur" operator="in"></feComposite>
+            <feOffset dx="0" dy="0" result="offsetBlur"></feOffset>
+            <feFlood flood-color="#000000" flood-opacity="0.3" result="offsetColor"></feFlood>
+            <feComposite in="offsetColor" in2="offsetBlur" operator="in" result="offsetBlur"></feComposite>
             <feMerge>
               <feMergeNode></feMergeNode>
               <feMergeNode in="SourceGraphic"></feMergeNode>
